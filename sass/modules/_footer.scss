@@ -1,0 +1,153 @@
+footer {
+  background: url(../images/footer-bg.jpg)no-repeat 50%;
+  background-size: cover;
+  padding: 60px $base-padding;
+
+  @media (max-width: 1300px) {
+    padding: 50px $base-padding-md;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 40px $base-padding-sm;
+  }
+
+  .wrap {
+    display: table;
+    width: 100%;
+    text-align: -webkit-center;
+  }
+
+  .copy {
+    display: table-cell;
+    font-family: $font-proxima;
+    @include fontSize(14px);
+    font-weight: 400;
+    color: white;
+    line-height: 20px;
+    width: 20%;
+    text-align: left;
+
+    @media (max-width: 810px) {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+
+    span {
+      font-weight: 600;
+      font-family: $font-proximaex;
+      text-transform: uppercase;
+      @include fontSize(19px);
+    }
+  }
+
+  .menu {
+    display: table-cell;
+    font-family: $font-proxima;
+
+    @media (max-width: 810px) {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    ul {
+      display: table;
+
+      @media (max-width: 810px) {
+        margin: 0 auto;
+      }
+
+      @media (max-width: 810px) {
+        margin-bottom: 25px;
+        margin-top: 10px;
+      }
+
+      li {
+        display: table-cell;
+        padding-left: 21px;
+        padding-right: 21px;
+
+        @media (max-width: 1300px) {
+          padding-left: 8px;
+          padding-right: 8px;
+        }
+
+        @media (max-width: 450px) {
+          display: block;
+        }
+
+        a {
+          color: #fff;
+          @include fontSize(17px);
+          font-weight: 400;
+          line-height: 49px;
+          text-transform: uppercase;
+
+          @media (max-width: 450px) {
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .social {
+    display: table-cell;
+    vertical-align: middle;
+    margin-left: 35px;
+    width: 20%;
+    text-align: right;
+
+    @media (max-width: 810px) {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-left: 0;
+    }
+
+    a {
+      border: 1px solid #fff;
+      @include fontSize(16px);
+      color: #fff;
+      width: 27px;
+      height: 27px;
+      margin-left: 7px;
+      display: inline-block;
+
+      i {
+        border: 1px solid rgba(166, 143, 126, 0.5);
+        display: block;
+        margin: 1px;
+        height: 23px;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  .created {
+    font-family: $font-proxima;
+    @include fontSize(14px);
+    font-weight: 400;
+    line-height: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+
+    @media (max-width: 1000px) {
+      margin-top: 35px;
+    }
+
+    span {
+      text-decoration: underline;
+    }
+  }
+}

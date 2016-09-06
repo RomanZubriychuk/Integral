@@ -1,0 +1,197 @@
+header {
+  display: table;
+  position: relative;
+  width: 100%;
+  font-family: $font-proxima;
+  padding: 40px $base-padding 34px;
+
+  @media (max-width: 1300px) {
+    padding: 30px $base-padding-md 24px;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 20px $base-padding-sm 14px;
+  }
+
+  @media (max-width: 900px) {
+    padding-right: 0;
+  }
+
+  > div {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 0;
+
+    @media (max-width: 900px) {
+      display: inherit;
+    }
+  }
+
+  .logo {
+    position: relative;
+    z-index: 999;
+
+    img {
+      @media (max-width: 500px) {
+        max-width: 140px;
+      }
+    }
+  }
+
+  .menu-top {
+    @media (max-width: 900px) {
+      padding-right: 20px;
+    }
+
+    ul {
+      display: table;
+
+      li {
+        display: table-cell;
+        padding-left: 23px;
+        padding-right: 23px;
+
+        @media (max-width: 1300px) {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        a {
+          color: #164054;
+          @include fontSize(18px);
+          font-weight: 400;
+          line-height: 49px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  .menu-collapser {
+    background: none;
+    position: absolute;
+    right: 0;
+    top: 25px;
+    padding: 0;
+
+    @media (max-width: 500px) {
+      top: 15px;
+    }
+
+    .collapse-button {
+      right: 20px;
+      background-color: #4089ab;
+      background-image: linear-gradient(to bottom, #4388aa, #3c88ab);
+
+      &:hover {
+        background-image: linear-gradient(to bottom, #3c88ab, #4388aa);
+      }
+    }
+  }
+  .collapsed {
+    display: block;
+    text-align: right;
+
+    ul {
+      display: block;
+
+      li {
+        display: block;
+      }
+    }
+  }
+
+  .select-block {
+    text-align: right;
+
+    .lang {
+      text-transform: uppercase;
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+
+      @media (max-width: 900px) {
+        position: absolute;
+        right: 110px;
+        top: 34px;
+      }
+
+      @media (max-width: 500px) {
+        display: none;
+      }
+
+      #languageimg {
+        position: absolute;
+        top: 8px;
+        left: 9px;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 3.5px 0 3.5px;
+        border-color: #ded1c4 transparent transparent transparent;
+        position: absolute;
+        right: 11px;
+        top: 13px;
+      }
+
+      select {
+        color: #534844;;
+        @include fontSize(13px);
+        font-weight: 400;
+        background-color: rgba(222,209,196,0.33);
+        border: none;
+        width: 125px;
+        height: 29px;
+        outline: none;
+        text-transform: uppercase;
+        -webkit-appearance: none;
+        padding-left: 35px;
+        position: relative;
+        z-index: 999;
+      }
+    }
+
+    .social {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 35px;
+
+      @media (max-width: 1100px) {
+        display: none;
+      }
+
+
+      a {
+        background-color: white;
+        border: 1px solid #3d94b7;
+        @include fontSize(16px);
+        color: #3f95b8;
+        width: 27px;
+        height: 27px;
+        margin-left: 7px;
+        display: inline-block;
+
+        i {
+          border: 1px solid rgba(63, 149, 184, 0.5);
+          display: block;
+          margin: 1px;
+          height: 23px;
+          position: relative;
+
+          &:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+//Title bar video page

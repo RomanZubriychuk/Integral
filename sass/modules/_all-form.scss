@@ -1,0 +1,231 @@
+//Subscribe form
+.subscribe {
+  background: url(../images/subscribe-bg.jpg) no-repeat 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  padding: $base-padding 15px 90px;
+  position: relative;
+  overflow: hidden;
+
+  .title {
+    color: white;
+    font-family: $font-proxima;
+    @include fontSize(52px);
+    font-weight: 300;
+    line-height: 52px;
+    padding-bottom: 30px;
+  }
+
+  .triangle {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: rotate(180deg);
+    z-index: 999;
+
+    &:before {
+      content:"";
+      width: 0;
+      height: 0;
+      opacity: 0.5;
+      border-style: solid;
+      border-width: 62px 0 0 1725px;
+      border-color: transparent transparent transparent #fff;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
+    &:after {
+      content:"";
+      width: 0;
+      height: 0;
+      opacity: 0.5;
+      border-style: solid;
+      border-width: 0 0 62px 1725px;
+      border-color: transparent transparent #fff transparent;
+      position: absolute;
+      right: -15px;
+      bottom: 0;
+    }
+  }
+
+  form {
+    input[type="email"] {
+      height: 54px;
+      width: 100%;
+      max-width: 447px;
+      color: #3f3028;
+      font-family: $font-proxima;
+      font-size: 18px;
+      font-weight: 700;
+      padding-left: 19px;
+      border: none;
+
+      &::-webkit-input-placeholder{color: #3f3028;}
+    }
+
+    input[type="submit"] {
+      width: 132px;
+      height: 54px;
+      background: url(../images/submit-bg.jpg);
+      border: none;
+      color: white;
+      font-family: $font-proximaex;
+      @include fontSize(26px);
+      font-weight: 600;
+      text-transform: uppercase;
+      vertical-align: top;
+      margin-left: -5px;
+
+      @media (max-width: 644px) {
+        margin-top: 15px;
+      }
+    }
+
+  }
+}
+
+//Contact form
+.contact-page {
+  .contact-form {
+    padding: 100px 20px 130px 20px;
+    max-width: 575px;
+    margin: 0 auto;
+
+    @media (max-width: 1300px) {
+      padding: 80px 20px 100px 20px;
+    }
+
+    @media (max-width: 1000px) {
+      padding: 50px 15px 60px 15px;
+    }
+
+    input, textarea {
+      display: block;
+      width: 100%;
+      border: none;
+      height: 54px;
+      margin-bottom: 16px;
+      color: #3f3028;
+      font-family: $font-proxima;
+      @include fontSize(18px);
+      font-weight: 400;
+      padding-left: 64px;
+      padding-right: 20px;
+
+      &::-webkit-input-placeholder {
+        color: #3f3028;
+      }
+
+      &:nth-child(1) {
+        background: #f4f0ec url(../images/name-bg.png) 20px 16px no-repeat;
+      }
+
+      &:nth-child(2) {
+        background: #f4f0ec url(../images/mail-bg.png) 20px 19px no-repeat;
+      }
+
+      &:nth-child(3) {
+        background: #f4f0ec url(../images/location-bg.png) 23px 13px no-repeat;
+      }
+
+      &:nth-child(4) {
+        background: #f4f0ec url(../images/message-bg.png) 21px 14px no-repeat;
+      }
+
+      &:last-child {
+        padding-left: 0;
+        background: url(../images/message-bg.jpg);
+        color: white;
+        font-family: $font-proximaex;
+        @include fontSize(26px);
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+
+    textarea {
+      height: 234px;
+      padding-top: 21px;
+    }
+  }
+}
+
+//Contact form consulting page
+.call-to-action {
+  padding: $base-padding;
+
+  @media (max-width: 1300px) {
+    padding: $base-padding-md ;
+    padding-top: 70px;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 40px 15px;
+  }
+
+  .wrap {
+    background: url(../images/contact-us-bg.jpg) no-repeat;
+    background-size: cover;
+    font-family: $font-proxima;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media (max-width: 1000px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .title {
+      color: white;
+      line-height: 52px;
+      @include fontSize(52px);
+      font-weight: 300;
+      padding-top: 60px;
+      padding-bottom: 40px;
+
+      @media (max-width: 1300px) {
+        @include fontSize(45px);
+        line-height: 40px;
+        padding-bottom: 30px;
+        padding-top: 40px;
+      }
+
+      @media (max-width: 1000px) {
+        @include fontSize(40px);
+        line-height: 40px;
+        padding-top: 30px;
+        padding-bottom: 25px;
+      }
+    }
+
+    .text {
+      @include fontSize(16px);
+      font-weight: 400;
+      line-height: 22px;
+      color: white;
+      max-width: 705px;
+      margin: 0 auto;
+      padding-bottom: 38px;
+    }
+
+    a {
+      background: url(../images/submit-bg.jpg);
+      padding: 13px 57px;
+      color: white;
+      font-family: $font-proximaex;
+      @include fontSize(26px);
+      font-weight: 600;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 50px;
+
+      @media (max-width: 1000px) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

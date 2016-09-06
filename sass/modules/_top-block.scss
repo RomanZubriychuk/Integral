@@ -1,0 +1,397 @@
+.top-block {
+  height: calc(100vh - 130px);
+  text-align: center;
+  font-family: $font-proxima;
+  position: relative;
+  overflow: hidden;
+  display: table;
+  width: 100%;
+  min-height: 490px;
+  
+  @media (max-width: 1300px) {
+    height: calc(100vh - 110px)
+  }
+
+  @media (max-width: 1000px) {
+    height: calc(100vh - 90px)
+  }
+
+  @media (max-width: 500px) {
+    height: calc(100vh - 76px)
+  }
+
+  .wrap {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  h1 {
+    color: white;
+    font-family: $font-proxima;
+    @include fontSize(72px);
+    font-weight: 300;
+    line-height: 80px;
+    padding-bottom: 26px;
+
+    @media (max-width: 1300px) {
+      @include fontSize(60px);
+    }
+
+    @media (max-width: 500px) {
+      @include fontSize(50px);
+    }
+  }
+
+  .sub-title {
+    padding-bottom: 80px;
+
+    h3 {
+      max-width: 980px;
+      margin: 0 auto;
+      color: white;
+      font-family: $font-proxima;
+      @include fontSize(20px);
+      font-weight: 400;
+      line-height: 26px;
+      padding: 0 15px;
+
+      @media (max-width: 1300px) {
+        @include fontSize(19px);
+      }
+
+      @media (max-width: 500px) {
+        @include fontSize(18px);
+      }
+    }
+  }
+
+  .triangle {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+
+     div {
+       width: 0;
+       height: 0;
+       border-style: solid;
+       border-width: 25px 0 0 386px;
+       border-color: transparent transparent transparent #fff;
+     }
+
+     &:before {
+       content:"";
+       width: 0;
+       height: 0;
+       opacity: 0.5;
+       border-style: solid;
+       border-width: 79px 0 0 1725px;
+       border-color: transparent transparent transparent #fff;
+       position: absolute;
+       left: 0;
+       bottom: 0;
+     }
+
+     &:after {
+       content:"";
+       width: 0;
+       height: 0;
+       opacity: 0.5;
+       border-style: solid;
+       border-width: 0 0 79px 1725px;
+       border-color: transparent transparent #fff transparent;
+       position: absolute;
+       right: 0;
+       bottom: 0;
+     }
+   }
+
+}
+
+//Home
+.home-page {
+  .top-block {
+    background: url(../images/top-front.jpg) no-repeat 50% 0%;
+    background-size: cover;
+
+    h1 {
+      opacity: 0.9;
+      color: white;
+      @include fontSize(52px);
+      font-weight: 300;
+      line-height: 48px;
+      max-width: 730px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: 0 auto;
+      padding-top: 7%;
+
+      @media (max-width: 1300px) {
+        @include fontSize(42px);
+        line-height: 42px;
+      }
+
+      @media (max-width: 500px) {
+        @include fontSize(32px);
+      }
+    }
+    .sub-title {
+      position: absolute;
+      width: 100%;
+      bottom: 20%;
+      padding-bottom: 0;
+    }
+
+    h3 {
+      color: white;
+      @include fontSize(20px);
+      font-weight: 400;
+      max-width: 700px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: 0 auto;
+      line-height: 26px;
+
+      @media (max-width: 1300px) {
+        @include fontSize(19px);
+      }
+
+      @media (max-width: 500px) {
+        display: none;
+      }
+    }
+  }
+  .video {
+    width: 76px;
+    height: 76px;
+    background-color: rgba(136,184,207,0.33);
+    border: 1px solid white;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 12px 0 12px 23px;
+      border-color: transparent transparent transparent #fff;
+      top: 50%;
+      left: 54%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+    }
+  }
+}
+
+//Contact
+.contact-page {
+
+  .top-block {
+    background: url(../images/top-contact.jpg) no-repeat 50% 0%;
+    background-size: cover;
+    height: calc(60vh - 130px);
+  }
+}
+
+//Consulting
+.consalting-page {
+
+  .top-block {
+    background: url(../images/top-consulting.jpg) no-repeat 50% 0%;
+    background-size: cover;
+    height: calc(65vh - 130px);
+
+    h1 {
+      @media (max-width: 1300px) {
+        @include fontSize(50px);
+      }
+
+      @media (max-width: 500px) {
+        @include fontSize(40px);
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+//Blog page
+.blog-page {
+  .top-block {
+    background: url(../images/top-blog.jpg) no-repeat 50% 0%;
+    background-size: cover;
+    height: calc(65vh - 130px);
+  }
+}
+
+//About page
+.about-page {
+  .top-block {
+    background: url(../images/top-about.jpg) no-repeat 50% 0%;
+    background-size: cover;
+    height: calc(65vh - 130px);
+    h3 span {
+      font-weight: bold;
+    }
+  }
+}
+
+//Projects page
+.projects-page {
+  .top-block {
+    background: url(../images/top-projects.jpg) no-repeat 50% 0%;
+    background-size: cover;
+    height: calc(65vh - 130px);
+    h3 span {
+      font-weight: bold;
+    }
+  }
+}
+
+//Project list page
+.project-list-page {
+  .top-block {
+    background: url(../images/project-list.jpg) no-repeat 50% 0%;
+    background-size: cover;
+    height: calc(65vh - 130px);
+    border-bottom: 1px solid #fff;
+  }
+}
+//Title bar video page
+.title-bar {
+  background: url(../images/tabs-bg.jpg);
+  background-size: cover;
+  padding: 60px $base-padding 50px;
+
+  @media (max-width: 1300px) {
+    padding: 50px $base-padding-md 40px;;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 30px $base-padding-sm 20px;;
+  }
+
+  .top {
+    @include clearfix;
+    background: url(../images/line-tabs.png) repeat-x 0 110%;
+    position: relative;
+
+    .title {
+      color: white;
+      font-family: $font-proxima;
+      @include fontSize(72px);
+      font-weight: 300;
+      line-height: 80px;
+      padding-bottom: 30px;
+      float: left;
+
+      @media (max-width: 600px) {
+        float: none;
+        padding-top: 25px;
+        text-align: center;
+      }
+    }
+
+    .search {
+      position: relative;
+      float: right;
+      margin-top: 23px;
+
+      @media (max-width: 600px) {
+        position: absolute;
+        top: -10px;
+        right: 0;
+        margin-top: 0;
+      }
+
+
+      &:before {
+        font-family: FontAwesome;
+        content: "\f002";
+        position: absolute;
+        top: 7px;
+        left: 11px;
+        font-size: 16px;
+        color: #fff;
+      }
+
+      input {
+        width: 155px;
+        height: 30px;
+        text-transform: uppercase;
+        padding-left: 40px;
+        font-family: $font-proxima;
+        @include fontSize(16px);
+        font-weight: 400;
+        border: none;
+        background: rgba(255,255,255,0.15);
+
+        &::-webkit-input-placeholder {color:#fff;}
+      }
+    }
+  }
+
+  .bottom {
+    @include clearfix;
+
+    .page-id {
+      color: white;
+      font-family: $font-proximaex;
+      @include fontSize(28px);
+      font-weight: bold;
+      line-height: 30px;
+      text-transform: uppercase;
+      float: left;
+
+      @media (max-width: 600px) {
+        float: none;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+
+      &:before {
+        content: url(../images/globe.png);
+        margin-right: 15px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    .breadcrumb {
+      float: right;
+      padding: 0;
+      margin: 0;
+      background: none;
+
+      @media (max-width: 600px) {
+        float: none;
+        text-align: center;
+      }
+
+      ul {
+
+        li {
+          display: inline-block;
+          color: white;
+          font-family: $font-proxima;
+          @include fontSize(16px);
+          font-weight: 400;
+          line-height: 30px;
+
+          +li {
+            &:before {
+              content: "/";
+              padding-left: 10px;
+              padding-right: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

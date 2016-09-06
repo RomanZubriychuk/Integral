@@ -1,0 +1,180 @@
+.what-we-do, .offer  {
+  padding: $base-padding;
+  text-align: center;
+  font-family: $font-proxima;
+  @include clearfix;
+
+  @media (max-width: 1300px) {
+    padding: $base-padding-md ;
+    padding-top: 70px;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 40px 15px;
+  }
+
+  h3.title {
+    color: #164054;
+    @include fontSize(52px);
+    font-weight: 300;
+    line-height: 30px;
+    padding-bottom: 40px;
+
+    @media (max-width: 1300px) {
+      @include fontSize(45px);
+      line-height: 40px;
+      padding-bottom: 30px;
+    }
+  }
+
+  .sub-title {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-bottom: 65px;
+
+    @media (max-width: 1300px) {
+      padding-bottom: 40px;
+    }
+
+    @media (max-width: 1000px) {
+      padding-bottom: 30px;
+    }
+  }
+
+  .item {
+    float: left;
+    width: 33.3333%;
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+
+    &:nth-child(3) {
+      padding-right: 32px;
+
+      @media (max-width: 1000px) {
+        padding-right: 10px;
+      }
+
+      .wrap {
+        margin-left: 0;
+      }
+    }
+
+    &:nth-child(5) {
+      padding-left: 32px;
+
+      @media (max-width: 1000px) {
+        padding-left: 10px;
+      }
+
+      .wrap {
+        margin-right: 0;
+      }
+    }
+    &:nth-child(4) {
+      padding-left: 16px;
+      padding-right: 16px;
+
+      @media (max-width: 1000px) {
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+
+      .wrap{
+        background: url(../images/what-we-do-2.jpg);
+        background-size: cover;
+
+        .title {color: white;}
+        p {color: #fff;}
+
+        .img-box {
+          .triangle {
+
+            &:before {
+              border-color: transparent transparent transparent #967a66;
+            }
+            &:after {
+              border-color: transparent transparent #967a66 transparent;
+            }
+          }
+        }
+      }
+    }
+
+    .wrap {
+      max-width: 350px;
+      margin: 0 auto;
+      background: url(../images/what-we-do-1.jpg);
+      overflow: hidden;
+
+      @media (max-width: 800px) {
+        margin: 0 auto 20px!important;
+
+      }
+
+      .title {
+        color: #534844;
+        @include fontSize(20px);
+        font-weight: 700;
+        padding: 29px 10px 21px 32px;
+        text-align: left;
+      }
+
+      p {
+        color: #534844;
+        @include fontSize(15px);
+        font-weight: 400;
+        line-height: 22px;
+        text-align: left;
+        padding: 30px 40px 25px 30px;
+      }
+    }
+
+    .img-box {
+      position: relative;
+
+      .triangle {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        transform: rotate(180deg);
+        z-index: 999;
+
+        &:before {
+          content:"";
+          width: 0;
+          height: 0;
+          opacity: 0.6;
+          border-style: solid;
+          border-width: 30px 0 0 350px;
+          border-color: transparent transparent transparent #ded1c4;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+
+        &:after {
+          content:"";
+          width: 0;
+          height: 0;
+          opacity: 0.6;
+          border-style: solid;
+          border-width: 0 0 30px 350px;
+          border-color: transparent transparent #ded1c4 transparent;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

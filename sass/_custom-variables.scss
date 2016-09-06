@@ -1,0 +1,18 @@
+//Fonts 
+@include font-face("Proximanova",
+        inline-font-files("proxima-nova/proximanovacond-light.otf", truetype));
+
+
+@include font-face("ProximanovaExCn",
+        inline-font-files("proxima-nova/ProximaNovaExCn-Semibold.otf", truetype));
+
+//Font regular
+$font-proxima: 'Proximanova', sans-serif;
+
+//Font ExCn
+$font-proximaex: 'ProximanovaExCn', sans-serif;
+
+//Base padding
+$base-padding: 100px;
+$base-padding-md: 50px;
+$base-padding-sm: 20px;

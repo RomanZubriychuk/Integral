@@ -1,0 +1,133 @@
+.testimonials {
+  padding: 80px $base-padding 64px;
+  background: url(../images/testimonials-bg.jpg) no-repeat 50%;
+  background-size: cover;
+  @include clearfix;
+
+  @media (max-width: 1300px) {
+    padding: 60px $base-padding-md 44px;
+  }
+
+  @media (max-width: 1100px) {
+    padding: 30px $base-padding-sm 20px;
+  }
+
+
+  .item {
+    float: left;
+    width: 33.3333%;
+    font-family: $font-proxima;
+
+    @media (max-width: 1050px) {
+      width: 100%;
+      float: none;
+      padding-bottom: 20px;
+    }
+
+    .wrap {
+      max-width: 350px;
+      margin: 0 auto;
+
+      @media (max-width: 1400px) {
+        max-width: 300px;
+      }
+
+      @media (max-width: 1050px) {
+        margin: 0 auto!important;
+      }
+    }
+
+    &:first-child {
+      .wrap {
+        margin-left: 0;
+      }
+    }
+
+    &:nth-child(3) {
+
+      .box:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -30px;
+        left: 28px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 30px 49px 0 0;
+        border-color: #fff transparent transparent transparent;
+      }
+
+      .wrap {
+        margin-right: 0;
+      }
+
+      .name {
+        padding-right: 35px;
+        text-align: right;
+      }
+    }
+
+    .box {
+      background: #fff;
+      padding: 30px 25px;
+      position: relative;
+      background: url(../images/review-bg.jpg);
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -30px;
+        right: 28px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 49px 30px 0;
+        border-color: transparent #fff transparent transparent;
+
+      }
+
+      p {
+        color: #666;
+        @include fontSize(16px);
+        line-height: 22px;
+        max-width: 260px;
+
+        strong {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .name {
+      color: white;
+      @include fontSize(16px);
+      font-weight: 400;
+      padding-left: 28px;
+      padding-top: 15px;
+    }
+  }
+
+  .show-more {
+    color: white;
+    font-family: $font-proximaex;
+    @include fontSize(22px);
+    font-weight: 600;
+    line-height: 37px;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    width: 159px;
+    height: 37px;
+    border: 1px solid white;
+    background-color: rgba(97,153,173,0.4);
+    margin: 0 auto;
+    margin-top: 60px;
+
+    &:hover {
+      text-decoration: none;
+      background-color: rgba(97,153,173,0.8);
+    }
+  }
+}
